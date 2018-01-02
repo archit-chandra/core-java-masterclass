@@ -1,4 +1,4 @@
-package com.gemalto.ics;
+package com.gemalto.variables;
 
 public class ByteShortInt {
 	
