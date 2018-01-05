@@ -1,5 +1,17 @@
 package com.gemalto.string;
 
+// byte
+// short
+// int
+// long
+// float
+// double
+// char
+// boolean
+
+
+
+// like a ninth primitive data type
 public class Strings {
 	public static void main(String[] args) {
 		
@@ -18,7 +30,7 @@ public class Strings {
 		// operator overloading of '+'
 		String numberString = "250.55";
 		numberString = numberString + "49.55";
-		System.out.println("numberString = " + numberString);
+		System.out.println("numberString = " + numberString); //250.5549.55
 		
 		String lastString = "10";
 		int myInt = 50;
