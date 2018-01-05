@@ -1,0 +1,73 @@
+docs.oracle.com/..../opsummary.html
+=============================================
+
+Assignment
+=============================================
+=
+
+Mathematical (simple)
+=============================================
++ (addition & appender)
+-
+*
+/
+% (modular -> gives remainder)
+
+Mathematical (double)
+=============================================
+++ (result = result + 1;)
+--
++= (result = result + other_variable;)
+-= 
+*=
+/=
+
+Conditions Comparator
+=============================================
+== (usually used inside if () {})
+!=
+<
+<=
+>
+>=
+
+Conditions Appenders
+=============================================
+&&
+||
+
+Note: 
+boolean isCar = false;
+if (isCar = true)
+    sysout("it will print"); // it will print
+    
+    
+Terniary operator -> assign value based on two conditions
+================================================================
+=?:
+
+boolean wasCar = isCar ? true : false;
+     (variable) (condition)
+     
+equavalent of:
+
+if(isCar == true) {
+    wasCar = true;
+} else {
+    wasCar = false;
+}
+
+docs.oracle.com/..../opsummary.html
+=========================================================
+instanceOf
+bitwise & bit shift operators
+etc
+
+
+
+
+
+
+
+
+
