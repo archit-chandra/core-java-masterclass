@@ -18,7 +18,7 @@ public class Strings {
 		// operator overloading of '+'
 		String numberString = "250.55";
 		numberString = numberString + "49.55";
-		System.out.println("numberString = " + numberString);
+		System.out.println("numberString = " + numberString); //250.5549.55
 		
 		String lastString = "10";
 		int myInt = 50;
