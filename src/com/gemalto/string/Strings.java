@@ -1,5 +1,17 @@
 package com.gemalto.string;
 
+// byte
+// short
+// int
+// long
+// float
+// double
+// char
+// boolean
+
+
+
+// like a ninth primitive data type
 public class Strings {
 	public static void main(String[] args) {
 		
