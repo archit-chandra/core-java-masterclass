@@ -1,4 +1,4 @@
-package com.gemalto.inheritance;
+package com.gemalto.oopsConcepts.inheritance;
 
 // incomplete class
 public class Fish extends Animal {

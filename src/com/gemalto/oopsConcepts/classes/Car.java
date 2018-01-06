@@ -1,4 +1,4 @@
-package com.gemalto.classes;
+package com.gemalto.oopsConcepts.classes;
 
 // classes = blueprint of object
 // think of like a user-defined type, much more powerful than primitive data type
