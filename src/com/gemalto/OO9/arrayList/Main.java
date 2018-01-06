@@ -55,7 +55,7 @@ public class Main {
         // scanner.nextInt(); => returns int, scanner.nextLine() =>returns string
         String searchItem = scanner.nextLine();
         
-        if (groceryList.findItem(searchItem) != null) {
+        if (groceryList.onFile(searchItem)) {
             System.out.println("Found " + searchItem + " in our grocery list");
         } else {
             System.out.println(searchItem + " is not in the shopping list");
@@ -63,19 +63,18 @@ public class Main {
     }
     
     private static void removeItem() {
-        System.out.print("Enter item number: ");
-        int itemNo = scanner.nextInt();
-        scanner.nextLine();
-        groceryList.removeGroceryItem(itemNo - 1);
+        System.out.print("Enter item name: ");
+        String itemName = scanner.nextLine();
+        groceryList.removeGroceryItem(itemName);
+        System.out.println(itemName + " has been removed from the grocery list");
     }
     
     private static void modifyItem() {
-        System.out.print("Enter item number: ");
-        int itemNo = scanner.nextInt();
-        scanner.nextLine();
-        System.out.print("Enter replacement item: ");
+        System.out.print("Current item name: ");
+        String currentItemName = scanner.nextLine();
+        System.out.print("Enter new item name: ");
         String newItem = scanner.nextLine();
-        groceryList.modifyGroceryItem(itemNo - 1, newItem); // itemNo - 1: because of Array Index
+        groceryList.modifyGroceryItem(currentItemName, newItem);
     }
     
     private static void printInstructions() {
