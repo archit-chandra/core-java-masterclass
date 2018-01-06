@@ -10,7 +10,7 @@ public class ControlFlow {
         // break are necessary to run each case only or will continue to run below cases
         // too
         // works with byte, int, char, short & strings(from JDK7)
-
+        
         int value = 4;
         switch (value) {
             case 1:
@@ -30,6 +30,29 @@ public class ControlFlow {
             default:
                 System.out.println("Value = neither 1 nor 2");
         }
+        
+        // for
+        // foreach variant also available
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.println("This is :" + i);
+        }
+        
+        // while
+        
+        int i = 10;
+        while (i < 15) {
+            System.out.println("This is :" + i); // 10,11,12,13,14
+            i++;
+        }
+        
+        // doWhile
+        
+        int check = 15;
+        do {
+            System.out.println("This is :" + check); // 15, runs atleast once without checking the condition
+            i++;
+        } while (i < check);
         
     }
     
