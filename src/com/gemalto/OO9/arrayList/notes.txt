@@ -1,0 +1,3 @@
+List resolves the followings:
+ 
+  1. Resizing of Array(grows as per need)
