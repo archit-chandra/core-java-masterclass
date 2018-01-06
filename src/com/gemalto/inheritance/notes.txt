@@ -1,0 +1,7 @@
+Objects can share similar characteristics, while being different at the same time
+
+Inhertance purpose is to inherit commonly used state & behavior characteristics while keeping its own identity separate
+
+It is good idea to to use below keywords when calling the methods:
+this
+super
