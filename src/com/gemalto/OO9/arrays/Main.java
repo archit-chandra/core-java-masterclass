@@ -29,9 +29,23 @@ public class Main {
             myIntArray3[i] = i * 30;
         }
         
-        /*
-         * for (int i = 0; i < 10; i++) { System.out.println("Element " + i +
-         * ", value is " + myIntArray3[i]); }
-         */
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Element " + i + ", value is " + myIntArray3[i]);
+        }
+        
+        // better to retrieve value, instead of hardcoding use array.length;
+        // so, even if the array length changes, it won't affect anything
+        
+        int[] myIntArray4 = new int[12]; // length changed
+        
+        printArray(myIntArray4);
+        
+    }
+    
+    private static void printArray(int[] myIntArray) {
+        for (int i = 0; i < myIntArray.length; i++) {
+            myIntArray[i] = i * 30;
+            System.out.println("Element " + i + ", value is " + myIntArray[i]);
+        }
     }
 }
