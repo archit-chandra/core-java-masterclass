@@ -1,4 +1,4 @@
-package com.gemalto.classes.classesAndObjects;
+package com.gemalto.classes;
 
 public class Main {
 
