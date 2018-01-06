@@ -1,4 +1,4 @@
-package com.gemalto.inheritance;
+package com.gemalto.oopsConcepts.inheritance;
 
 public class Animal {
     

@@ -1,4 +1,4 @@
-package com.gemalto.classes;
+package com.gemalto.oopsConcepts.classes;
 
 public class Main {
     

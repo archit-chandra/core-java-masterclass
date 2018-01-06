@@ -1,4 +1,4 @@
-package com.gemalto.encapsulation;
+package com.gemalto.oopsConcepts.encapsulation;
 
 public class Main {
     
