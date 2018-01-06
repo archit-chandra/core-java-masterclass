@@ -1,4 +1,4 @@
-package com.gemalto.controlflow;
+package com.gemalto.OO6.controlflow;
 
 public class ControlFlow {
     

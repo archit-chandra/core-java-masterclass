@@ -1,4 +1,4 @@
-package com.gemalto.methods;
+package com.gemalto.OO5.methods;
 
 public class Methods {
     

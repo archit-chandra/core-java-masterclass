@@ -1,4 +1,4 @@
-package com.gemalto.codblocksAndScopes;
+package com.gemalto.OO5.codblocksAndScopes;
 
 public class CodeBlocksAndScopes {
     public static void main() {

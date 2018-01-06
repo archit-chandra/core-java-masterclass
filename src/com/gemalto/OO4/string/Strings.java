@@ -1,4 +1,4 @@
-package com.gemalto.string;
+package com.gemalto.OO4.string;
 
 // byte
 // short

@@ -1,4 +1,4 @@
-package com.gemalto.expressionsAndStatements;
+package com.gemalto.OO5.expressionsAndStatements;
 
 public class ExpressionsAndStatements {
     

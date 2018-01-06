@@ -1,4 +1,4 @@
-package com.gemalto;
+package com.gemalto.OO3;
 
 public class Hello {
 //	public static void main(String[] args) {
