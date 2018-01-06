@@ -1,3 +1,20 @@
-List resolves the followings:
+ArrayList resolves the followings:
  
-  1. Resizing of Array(grows as per need)
+  1. Resizing of Array(grows as per need).
+  2. Ordered collection (elements in same sequence as entered into the list)
+  
+  
+ArrayList common methods:
+
+ 1. add(Object object)
+ 2. remove(int index)
+ 3. contains(Object object)
+ 4. indexOf(Object object)   [indexOf(Object object) => -1, if items is not present]
+ 5. size()
+ 6. get(int index)
+ 7. set(int index, Object object)
+ 
+  
+  
+  
+ Collection(I) <- List(I) <- ArrayList(C)
