@@ -1,5 +1,6 @@
 package com.gemalto.OO9.arrayList;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -37,11 +38,21 @@ public class Main {
                     searchForItem();
                     break;
                 case 6:
+                    processArrayList();
+                case 7:
                     quit = true;
                     break;
                 default:
             }
         }
+    }
+    
+    // initialiazing ArrayList from existing ArrayList
+    private static void processArrayList() {
+        ArrayList<String> newArray = new ArrayList<>();
+        newArray.addAll(groceryList.getGroceryList());
+        
+        ArrayList<String> nextArray = new ArrayList<>(groceryList.getGroceryList());
     }
     
     private static void addItem() {
