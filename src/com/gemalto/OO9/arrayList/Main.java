@@ -39,6 +39,7 @@ public class Main {
                     break;
                 case 6:
                     processArrayList();
+                    break;
                 case 7:
                     quit = true;
                     break;
@@ -51,8 +52,30 @@ public class Main {
     private static void processArrayList() {
         ArrayList<String> newArray = new ArrayList<>();
         newArray.addAll(groceryList.getGroceryList());
+        printArrayList(newArray);
+        System.out.println("============================================");
         
         ArrayList<String> nextArray = new ArrayList<>(groceryList.getGroceryList());
+        printArrayList(nextArray);
+        System.out.println("============================================");
+        
+        // converting ArrayList<String> to Array of Strings
+        String[] myArray = new String[groceryList.getGroceryList().size()];
+        myArray = groceryList.getGroceryList().toArray(myArray);
+        printArray(myArray);
+        System.out.println("============================================");
+    }
+    
+    private static void printArrayList(ArrayList<String> arrayList) {
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println("ArrayList value at " + i + " = " + arrayList.get(i));
+        }
+    }
+    
+    private static void printArray(String[] array) {
+        for (String value : array) {
+            System.out.println("Array value  = " + value);
+        }
     }
     
     private static void addItem() {
@@ -96,7 +119,8 @@ public class Main {
         System.out.println("\t 3 - To modify the item in the list.");
         System.out.println("\t 4 - To remove the item from the list.");
         System.out.println("\t 5 - To search for the item in the list.");
-        System.out.println("\t 6 - To quit the application.");
+        System.out.println("\t 6 - To process the ArrayList.");
+        System.out.println("\t 7 - To quit the application.");
     }
     
 }
