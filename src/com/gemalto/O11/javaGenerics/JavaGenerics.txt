@@ -1,2 +1,16 @@
 Java Generics
 ==============
+
+Introduced in Java 5
+
+To avoid type casting issues when fetching the items.
+Avoids runtime error while fetching (ClassCastException)
+
+Moving runtime -> compile time error
+
+Ensures what type of object we are going to be storing
+Warning for Raw types
+
+items.add(1);
+items.add("Archit");
+items.add(2)
