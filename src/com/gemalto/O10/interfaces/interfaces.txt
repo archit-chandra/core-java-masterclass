@@ -1,0 +1,5 @@
+To provide the common behavior to be used by several classes
+Specifies list of abstract methods that implementing class is bound to implement (define)
+No code in the interface is there
+
+abstract methods => no actual code here, just the declaration
