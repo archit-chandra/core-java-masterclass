@@ -1,2 +1,25 @@
 Inner Classes
 ===================
+It is possible to list a class inside another class.
+
+1. static nested classes
+===========================
+to associate a class with its outer class.
+In terms of behavior, it is identical to top-level class.
+But it is packaged in its outer class rather than in the package itself
+
+=>
+can't access non-static methods or members of the outer class without first creating the instance of the outer class
+
+
+2. non-static static classes
+===========================
+
+
+
+3. local class
+===========================
+
+
+4. anonymous class
+===========================
