@@ -1,2 +1,6 @@
 Abstract class
 ===============
+contains abstract methods => needs to be define in the sub class
+
+but unlike interface, there can be something define in abstract class
+Interface was entirely abstract
