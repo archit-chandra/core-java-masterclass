@@ -7,6 +7,8 @@ public class Main2 {
         BaseBallPlayer pat = new BaseBallPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
         
+        // Problem: Team can add any type of player = WRONG
+        // Only similar type of player can be added
         Team crows = new Team("Crows");
         crows.addPlayer(joe);
         crows.addPlayer(pat);
