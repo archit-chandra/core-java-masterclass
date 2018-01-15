@@ -7,14 +7,23 @@ public class Main2 {
         BaseBallPlayer pat = new BaseBallPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
         
-        // Problem: Team can add any type of player = WRONG
-        // Only similar type of player can be added
-        Team crows = new Team("Crows");
+        // Now Team allows specific type of Player
+        Team<FootballPlayer> crows = new Team<>("Crows");
         crows.addPlayer(joe);
-        crows.addPlayer(pat);
-        crows.addPlayer(beckham);
+        // after Generics implementation below code --> throws compliation error
+        // crows.addPlayer(pat);
+        // crows.addPlayer(beckham);
         
         System.out.println(crows.numPlayers());
+        
+        // Similarly,
+        Team<BaseBallPlayer> baseballTeam = new Team<>("Chicago Cubs");
+        baseballTeam.addPlayer(pat);
+        
+        // <String> allowed: Except primitive type
+        Team<String> brokenTeam = new Team<>("This won't work");
+        brokenTeam.addPlayer("No one");
+        
     }
     
 }

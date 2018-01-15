@@ -2,14 +2,15 @@ package com.gemalto.O11.javaGenerics;
 
 import java.util.ArrayList;
 
-public class Team {
+//When we instantiate a class, <T> will be replaced by Java with the actual class with the real type
+public class Team<T> {
     private String name;
     int played = 0;
     int won = 0;
     int lost = 0;
     int tied = 0;
     
-    private ArrayList<Player> members = new ArrayList<>();
+    private ArrayList<T> members = new ArrayList<>();
     
     public Team(String name) {
         super();
@@ -24,13 +25,17 @@ public class Team {
         this.name = name;
     }
     
-    public boolean addPlayer(Player player) {
+    public boolean addPlayer(T player) {
         if (members.contains(player)) {
-            System.out.println(player.getName() + " is already on this team");
+            System.out.println(((Player) player).getName() + " is already on this team"); // Casting because of
+                                                                                          // Compilation error. Compiler
+                                                                                          // do not know that Player of
+                                                                                          // Type T has getName() until
+                                                                                          // runtime.
             return false;
         } else {
             members.add(player);
-            System.out.println(player.getName() + " picked for team " + name);
+            System.out.println(((Player) player).getName() + " picked for team " + name);
             return true;
         }
     }
