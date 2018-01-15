@@ -21,8 +21,9 @@ public class Main2 {
         baseballTeam.addPlayer(pat);
         
         // <String> allowed: Except primitive type
-        Team<String> brokenTeam = new Team<>("This won't work");
-        brokenTeam.addPlayer("No one");
+        // After Bounded Type parameters
+        // Team<String> brokenTeam = new Team<>("This won't work");
+        // brokenTeam.addPlayer("No one");
         
     }
     

@@ -3,7 +3,8 @@ package com.gemalto.O11.javaGenerics;
 import java.util.ArrayList;
 
 //When we instantiate a class, <T> will be replaced by Java with the actual class with the real type
-public class Team<T> {
+// Java provides mechanism to restrict Type arguments ==> Bounded Type parameters (Upper Bound)
+public class Team<T extends Player> {
     private String name;
     int played = 0;
     int won = 0;
@@ -27,15 +28,11 @@ public class Team<T> {
     
     public boolean addPlayer(T player) {
         if (members.contains(player)) {
-            System.out.println(((Player) player).getName() + " is already on this team"); // Casting because of
-                                                                                          // Compilation error. Compiler
-                                                                                          // do not know that Player of
-                                                                                          // Type T has getName() until
-                                                                                          // runtime.
+            System.out.println(player.getName() + " is already on this team");
             return false;
         } else {
             members.add(player);
-            System.out.println(((Player) player).getName() + " picked for team " + name);
+            System.out.println(player.getName() + " picked for team " + name);
             return true;
         }
     }
