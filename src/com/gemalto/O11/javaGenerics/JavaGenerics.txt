@@ -14,3 +14,19 @@ Warning for Raw types
 items.add(1);
 items.add("Archit");
 items.add(2)
+
+
+
+* Argument that can be passed in the Type parameter can be a Class or Interface
+Interface itself could specify Typed parameter
+
+Single Bound
+Multiple Bound
+
+public class Team<T extends Player & Coach & Manager> {
+    ....
+}
+
+Player = class (first) OR Error
+Coach = interface
+Manager = interface
