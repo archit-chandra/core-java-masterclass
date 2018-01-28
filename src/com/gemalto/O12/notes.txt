@@ -1,8 +1,80 @@
 The things that you will name in Java are:
-Packages
-Classes
-Interfaces
-Methods
-Constants
-Variables
-Type parameters
+
+1. Packages = lower case,
+              unique,
+              reversed internet domain name => prefix for package name
+
+              eg.
+              switch.supplier.com => com.supplier._switch (java keyword)
+              1world.com => com._1world
+              experts-exhange.com => com.experts_exchange
+
+
+2. Classes = camelCase,
+             nouns,
+             starts with capital letter & each word => capital too
+
+             eg.
+             ArrayList
+             GearBox
+             Main
+
+
+3. Interfaces = capitalized as class name,
+                what objects implementing the interface will become or what they will do
+
+                eg.
+                List
+                Comparable
+                Serializable
+
+
+
+4. Methods = mixedCase,
+             verbs
+             reflect the function performed or th eresult returned
+
+             eg.
+             size()
+             getName()
+             addPlayer()
+
+
+
+5. Constants = UPPER_CASE
+               separated with (_)
+               declared using final keyword
+
+               eg.
+               static final int MAX_INT
+               static final short SEVERITY_ERROR
+               static final double PI = 3.1456785
+
+
+
+
+6. Variables = mixedCase
+               meaningful & indicative
+               starts with lower case
+               no (_) used
+
+               eg.
+               i
+               league
+               SydneySwans
+               boxLength
+
+
+
+
+
+7. Type parameters = single letter
+                     capital letter
+
+                     eg.
+                     E - element
+                     T - type
+                     N - number
+                     V - value
+                     K - key
+                     S, U, V - other types
