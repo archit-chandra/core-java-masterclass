@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //When we instantiate a class, <T> will be replaced by Java with the actual class with the real type
 // Java provides mechanism to restrict Type arguments ==> Bounded Type parameters (Upper Bound)
-public class Team<T extends Player> {
+public class Team<T extends Player> implements Comparable<Team<T>> {
     private String name;
     int played = 0;
     int won = 0;
@@ -69,4 +69,14 @@ public class Team<T extends Player> {
         return (won * 2) + tied;
     }
 
+    @Override
+    public int compareTo(Team<T> team) {
+        if (this.ranking() > team.ranking()) {
+            return -1;
+        } else if (this.ranking() < team.ranking()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }

@@ -47,6 +47,11 @@ public class Main2 {
         System.out.println(melbourne.getName() + " : " + melbourne.ranking());
         System.out.println(freamantle.getName() + " : " + freamantle.ranking());
         System.out.println(hawthorn.getName() + " : " + hawthorn.ranking());
+
+        System.out.println(crows.compareTo(melbourne));
+        System.out.println(crows.compareTo(hawthorn));
+        System.out.println(hawthorn.compareTo(crows));
+        System.out.println(melbourne.compareTo(freamantle));
     }
     
 }
