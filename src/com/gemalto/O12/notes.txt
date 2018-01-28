@@ -1,0 +1,8 @@
+The things that you will name in Java are:
+Packages
+Classes
+Interfaces
+Methods
+Constants
+Variables
+Type parameters
