@@ -35,10 +35,18 @@ public class Main2 {
         Team<FootballPlayer> hawthorn = new Team<>("Hawthorn");
         Team<FootballPlayer> freamantle = new Team<>("Freamantle");
 
+        hawthorn.matchResult(freamantle, 1, 0);
+        hawthorn.matchResult(crows, 3, 8);
+
         crows.matchResult(freamantle, 2, 1);
         //Error: Converted Team opponent -> Team<T> opponent
         //crows.matchResult(baseballTeam, 1, 1);
 
+        System.out.println("Rankings");
+        System.out.println(crows.getName() + " : " + crows.ranking());
+        System.out.println(melbourne.getName() + " : " + melbourne.ranking());
+        System.out.println(freamantle.getName() + " : " + freamantle.ranking());
+        System.out.println(hawthorn.getName() + " : " + hawthorn.ranking());
     }
     
 }
