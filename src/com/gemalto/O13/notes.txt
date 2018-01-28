@@ -1,0 +1,29 @@
+==============================================
+Collection
+       ->Set
+           ->SortedSet
+       ->List
+           ->ArrayList
+           ->LinkedList
+       ->Queue
+       ->Deque
+
+
+Map
+   ->SortedMap
+==============================================
+In Theatre class,
+private List<Seat> seats = new ArrayList<>();
+
+ArrayList
+LinkedList
+
+Changed: List -> Collection (more generic)
+
+HashSet
+LinkedHashSet
+
+
+TreeSet - error (because requires to implement Comparable interface on Seat)
+
+
