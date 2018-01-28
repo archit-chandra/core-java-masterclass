@@ -33,3 +33,7 @@ Manager = interface
 T = any class extending Player and implementing Coach & manager
 
 More bounds more restrictions on T
+
+public class League<U extends Player, T extends Team> {
+    ....
+}
