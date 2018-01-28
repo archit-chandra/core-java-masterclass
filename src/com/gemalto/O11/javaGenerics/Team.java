@@ -40,18 +40,26 @@ public class Team<T extends Player> {
     public int numPlayers() {
         return members.size();
     }
-    
-    public void matchResult(Team opponent, int ourScore, int theirScore) {
+
+    //Converted Team opponent -> Team<T> opponent : to have only similar type of team competing for match
+    public void matchResult(Team<T> opponent, int ourScore, int theirScore) {
+
+        String message;
+
         if (ourScore > theirScore) {
+            message = " beat ";
             won++;
         } else if (ourScore == theirScore) {
+            message = " drew with ";
             tied++;
         } else {
+            message = " lost to ";
             lost++;
         }
         played++;
         
         if (opponent != null) {
+            System.out.println(this.getName() + message + opponent.getName());
             opponent.matchResult(null, theirScore, ourScore); // to keep score of opponent & null => avoid cyclic
             // calling
         }

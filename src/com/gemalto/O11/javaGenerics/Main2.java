@@ -24,7 +24,21 @@ public class Main2 {
         // After Bounded Type parameters
         // Team<String> brokenTeam = new Team<>("This won't work");
         // brokenTeam.addPlayer("No one");
-        
+
+        Team<SoccerPlayer> brokenTeam = new Team<>("this won't work");
+        brokenTeam.addPlayer(beckham);
+
+        Team<FootballPlayer> melbourne = new Team<>("Melborne");
+        FootballPlayer banks = new FootballPlayer("Gordon");
+        melbourne.addPlayer(banks);
+
+        Team<FootballPlayer> hawthorn = new Team<>("Hawthorn");
+        Team<FootballPlayer> freamantle = new Team<>("Freamantle");
+
+        crows.matchResult(freamantle, 2, 1);
+        //Error: Converted Team opponent -> Team<T> opponent
+        //crows.matchResult(baseballTeam, 1, 1);
+
     }
     
 }
