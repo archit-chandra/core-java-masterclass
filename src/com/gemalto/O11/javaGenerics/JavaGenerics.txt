@@ -27,6 +27,9 @@ public class Team<T extends Player & Coach & Manager> {
     ....
 }
 
-Player = class (first) OR Error
+Player = class (should be placed first) OR Error
 Coach = interface
 Manager = interface
+T = any class extending Player and implementing Coach & manager
+
+More bounds more restrictions on T
