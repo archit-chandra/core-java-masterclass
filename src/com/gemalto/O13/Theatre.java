@@ -8,7 +8,8 @@ public class Theatre {
     private final String theatreName;
     //    ArrayList <-> LinkedList (the code will still work)
     //    List -> Collection (made it more generic)
-    private List<Seat> seats = new ArrayList<>();
+    //private -> public only for testing purpose (NOT RECOMMENDED)
+    public static List<Seat> seats = new ArrayList<>();
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
