@@ -1,6 +1,6 @@
 package com.gemalto.O13;
 
-public class Seat {
+public class Seat implements Comparable<Seat> {
 
     private final String seatNumber;
     private boolean reserved = false;
@@ -33,5 +33,10 @@ public class Seat {
 
     public String getSeatNumber() {
         return seatNumber;
+    }
+
+    @Override
+    public int compareTo(Seat seat) {
+        return this.seatNumber.compareTo(seat.getSeatNumber());
     }
 }

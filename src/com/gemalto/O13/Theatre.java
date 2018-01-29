@@ -1,13 +1,14 @@
 package com.gemalto.O13;
 
-import java.util.Collection;
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Theatre {
     private final String theatreName;
-    //    ArrayList -> LinkedList (the code will still work)
+    //    ArrayList <-> LinkedList (the code will still work)
     //    List -> Collection (made it more generic)
-    private Collection<Seat> seats = new LinkedList<>();
+    private List<Seat> seats = new ArrayList<>();
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
@@ -25,19 +26,32 @@ public class Theatre {
     }
 
     public boolean reserveSeat(String seatNumber) {
-        Seat requestSeat = null;
-        for (Seat seat : seats) {
-            if (seat.getSeatNumber().equals(seatNumber)) {
-                requestSeat = seat;
-                break;
-            }
-        }
 
-        if (requestSeat == null) {
-            System.out.println("There is no seat " + seatNumber);
+        Seat requestedSeat = new Seat(seatNumber);
+
+        //binarySearch: fastest way to find an item in a sorted list
+        int foundSeat = Collections.binarySearch(seats, requestedSeat, null);
+
+        if (foundSeat >= 0) {
+            return seats.get(foundSeat).reserve();
+        } else {
+            System.out.println("There is no seat" + seatNumber);
             return false;
         }
-        return requestSeat.reserve();
+
+//        for (Seat seat : seats) {
+//            System.out.print(".");
+//            if (seat.getSeatNumber().equals(seatNumber)) {
+//                requestedSeat = seat;
+//                break;
+//            }
+//        }
+//
+//        if (requestedSeat == null) {
+//            System.out.println("There is no seat " + seatNumber);
+//            return false;
+//        }
+//        return requestedSeat.reserve();
     }
 
     // for testing purpose

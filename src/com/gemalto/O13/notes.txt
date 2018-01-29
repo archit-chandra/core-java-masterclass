@@ -24,6 +24,6 @@ HashSet
 LinkedHashSet
 
 
-TreeSet - error (because requires to implement Comparable interface on Seat)
+TreeSet - error (ClassCastException: because requires to implement Comparable interface on Seat)
 
 
