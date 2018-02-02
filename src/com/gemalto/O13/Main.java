@@ -30,6 +30,13 @@ public class Main {
         List<Seat> reverseSeats = new ArrayList<>(theatre.getSeats());
         Collections.reverse(reverseSeats);
         printList(reverseSeats);
+
+        //Using Comparator PRICE_ORDER
+        List<Seat> priceSeats = new ArrayList<>(theatre.getSeats());
+        priceSeats.add(new Seat("B00", 13.00));
+        priceSeats.add(new Seat("A00", 13.00));
+        Collections.sort(priceSeats, Theatre.PRICE_ORDER);
+        printList(priceSeats);
     }
 
     public static void printList(Collection<Seat> list) {

@@ -1,15 +1,29 @@
 package com.gemalto.O13;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Theatre {
     private final String theatreName;
     //    ArrayList <-> LinkedList (the code will still work)
     //    List -> Collection (made it more generic)
     private static List<Seat> seats = new ArrayList<>();
+
+    static final Comparator<Seat> PRICE_ORDER;
+
+    static {
+        PRICE_ORDER = new Comparator<Seat>() {
+            @Override
+            public int compare(Seat seat1, Seat seat2) {
+                if (seat1.getPrice() < seat2.getPrice()) {
+                    return -1;
+                } else if (seat1.getPrice() > seat2.getPrice()) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+        };
+    }
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
