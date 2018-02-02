@@ -40,6 +40,11 @@ public class Main {
         sortList(seatCopy);
         System.out.println("Printing bubble sorted seatCopy");
         printList(seatCopy);
+
+        // Below code -> IndexOutOfBoundsException: Source does not fit in dest
+        // newList has potential to have size = 96 = theatre.getSeatList().size() but at present its size = 0;
+//        List<Seat> newList = new ArrayList<>(theatre.getSeatList().size());
+//        Collections.copy(newList, theatre.getSeatList());
     }
 
     public static void printList(List<Seat> list) {

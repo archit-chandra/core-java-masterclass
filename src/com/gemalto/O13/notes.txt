@@ -27,3 +27,16 @@ LinkedHashSet
 TreeSet - error (ClassCastException: because requires to implement Comparable interface on Seat)
 
 
+
+
+Collections methods:
+    reverse
+    shuffle
+    sort
+    swap
+    (copy -> not useful in general)
+    copy(List<? super T> dest, List<? extends T> src)
+         dest -> Collections/ Iterable/ List
+         src  -> List
+
+
