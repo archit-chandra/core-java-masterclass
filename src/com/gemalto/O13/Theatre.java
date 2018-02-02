@@ -8,8 +8,7 @@ public class Theatre {
     private final String theatreName;
     //    ArrayList <-> LinkedList (the code will still work)
     //    List -> Collection (made it more generic)
-    //private -> public only for testing purpose (NOT RECOMMENDED)
-    public static List<Seat> seats = new ArrayList<>();
+    private static List<Seat> seats = new ArrayList<>();
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
@@ -60,5 +59,9 @@ public class Theatre {
         for (Seat seat : seats) {
             System.out.println(seat.getSeatNumber());
         }
+    }
+
+    public List<Seat> getSeatList() {
+        return seats;
     }
 }
