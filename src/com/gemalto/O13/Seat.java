@@ -3,8 +3,13 @@ package com.gemalto.O13;
 public class Seat implements Comparable<Seat> {
 
     private final String seatNumber;
+    private double price;
     private boolean reserved = false;
 
+    public Seat(String seatNumber, double price) {
+        this.seatNumber = seatNumber;
+        this.price = price;
+    }
 
     public Seat(String seatNumber) {
         this.seatNumber = seatNumber;
@@ -33,6 +38,10 @@ public class Seat implements Comparable<Seat> {
 
     public String getSeatNumber() {
         return seatNumber;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     @Override
