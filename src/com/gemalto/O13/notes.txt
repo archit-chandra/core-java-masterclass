@@ -62,3 +62,12 @@ Fix:
 --------
 More work required on the compare()
 
+
+
+
+Map
+========================
+can have a single unique key (no duplication) -> if try to duplicate, the new value will overwrite the old value
+each key has single value
+
+
