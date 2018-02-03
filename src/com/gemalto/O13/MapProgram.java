@@ -43,5 +43,31 @@ public class MapProgram {
         for (String key : languages.keySet()) {
             System.out.println(key + " : " + languages.get(key));
         }
+
+        System.out.println("----------------------------------------------------------------------------------");
+        // added again because it was removed earlier
+        languages.put("lisp", "lisp description");
+        // this will replace the value in the map but will show the earlier value
+        System.out.println(languages.replace("lisp", "lisp new description"));
+
+        // this will show the replaced value
+        System.out.println("lisp value : " + languages.get("lisp"));
+
+        // below is the safer method
+        // ensures that new value is updated only if old value exists
+        if (languages.replace("lisp", "this will not work", "list most updated description")) {
+            System.out.println("lisp replace");
+        } else {
+            System.out.println("lisp was not replaced");
+        }
+
+        // this will show 'null' because no value for 'scala' in the map
+        System.out.println(languages.replace("scala", "this will not be addded"));
+
+        for (String key : languages.keySet()) {
+            System.out.println(key + " : " + languages.get(key));
+        }
+
+
     }
 }

@@ -70,4 +70,17 @@ Map
 can have a single unique key (no duplication) -> if try to duplicate, the new value will overwrite the old value
 each key has single value
 
+Map's methods:
+---------------
+put
+get
+containsKey
+keySet
+remove
+replace
+
+
+Immutable objects can't be changed (prefered to be as a map's keys, although Java don't prohibit that)
+
+
 
