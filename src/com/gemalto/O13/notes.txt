@@ -40,3 +40,25 @@ Collections methods:
          src  -> List
 
 
+Comparator can be in a new class or create an object(anonymous class) within some other class as here.
+Beware of the problem: Ordering being consistent with equals
+---------------------
+Explaination:
+--------------
+In Seat -> public int compareTo(Seat seat) {...} returns 0 if same seat number
+In Comparator's comapare() , it is not consistent with equals (it returns 0 when seats have same price)
+            @Override
+            public int compare(Seat seat1, Seat seat2) {
+                if (seat1.getPrice() < seat2.getPrice()) {
+                    return -1;
+                } else if (seat1.getPrice() > seat2.getPrice()) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+
+Fix:
+--------
+More work required on the compare()
+

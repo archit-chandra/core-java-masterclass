@@ -46,6 +46,6 @@ public class Seat implements Comparable<Seat> {
 
     @Override
     public int compareTo(Seat seat) {
-        return this.seatNumber.compareTo(seat.getSeatNumber());
+        return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
     }
 }
