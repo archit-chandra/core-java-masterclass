@@ -2,7 +2,7 @@
 Collection
        ->Set
            ->SortedSet
-       ->List
+       ->List (Ordered collection of item that can contain duplicates)
            ->ArrayList
            ->LinkedList
        ->Queue
@@ -95,5 +95,26 @@ Strategy to define immutable classes:
                 (a) declare class -> final
                 (b) constructor -> private, & construct instances in factory methods
     4.
+
+
+
+Sets & HashSets
+====================
+Unlike List (Ordered collection of item that can contain duplicates),
+Set has following characteristics:
+    1. No defined ordering (un-ordered)
+    2. Can not contain duplicates
+    3. It takes single type Set<T>
+    4. Common methods-
+                       add()
+                       remove()
+                       clear()
+                       size()
+                       isEmpty()
+                       contains() -> can check if something exists
+    5. Can't retrieve items from Set using index, can check if something exists
+    6. HashSet - most common implementation
+
+
 
 

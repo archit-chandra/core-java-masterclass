@@ -15,7 +15,7 @@ public class AdventureMain {
         locations.put(0, new Location(0, "You are learning Java", tempExit));
         // unwanted, just an example to show that there is could be RuntimeException -> null pointer in Location constructor
         //locations.put(0, new Location(0, You are learning Java", null));
-        
+
         tempExit = new HashMap<>();
         tempExit.put("W", 2);
         tempExit.put("W", 2);
