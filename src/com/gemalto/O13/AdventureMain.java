@@ -21,21 +21,25 @@ public class AdventureMain {
         locations.get(1).addExit("E", 3);
         locations.get(1).addExit("S", 4);
         locations.get(1).addExit("N", 5);
-        //locations.get(1).addExit("Q", 0); moved to location constructor
 
         locations.get(2).addExit("N", 5);
-        //locations.get(2).addExit("Q", 0); moved to location constructor
 
         locations.get(3).addExit("W", 1);
-        //locations.get(3).addExit("Q", 0); moved to location constructor
 
         locations.get(4).addExit("N", 1);
         locations.get(4).addExit("W", 2);
-        //locations.get(4).addExit("Q", 0); moved to location constructor
 
         locations.get(5).addExit("S", 1);
         locations.get(5).addExit("W", 2);
-        //locations.get(5).addExit("Q", 0); moved to location constructor
+
+        // this will allow full words commands like 'run south', 'Go West' etc
+        Map<String, String> vocabulary = new HashMap<>();
+        vocabulary.put("QUIT", "Q");
+        vocabulary.put("NORTH", "N");
+        vocabulary.put("SOUTH", "S");
+        vocabulary.put("WEST", "W");
+        vocabulary.put("EAST", "E");
+
 
         int loc = 1;
         while (true) {
@@ -55,26 +59,21 @@ public class AdventureMain {
             System.out.println();
 
             String direction = scanner.nextLine().toUpperCase();
+            if (direction.length() > 1) {
+                String[] words = direction.split(" ");
+                for (String word : words) {
+                    if (vocabulary.containsKey(word)) {
+                        direction = vocabulary.get(word);
+                        break;
+                    }
+                }
+            }
 
             if (exits.containsKey(direction)) {
                 loc = exits.get(direction);
             } else {
                 System.out.println("You can't go in that direction");
             }
-        }
-
-        System.out.println("------------------------ String split example 1 --------------------------------------");
-
-        String[] exp1 = "You are standing on the road".split(" ");
-        for (String i : exp1) {
-            System.out.println(i);
-        }
-
-        System.out.println("------------------------ String split example 1 --------------------------------------");
-
-        String[] exp2 = "You are in the building, a well house for a small spring".split(", ");
-        for (String i : exp2) {
-            System.out.println(i);
         }
     }
 }
