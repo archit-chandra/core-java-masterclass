@@ -94,6 +94,6 @@ Strategy to define immutable classes:
     3. Don't allow sub-classes to override methods
                 (a) declare class -> final
                 (b) constructor -> private, & construct instances in factory methods
-    4. 
+    4.
 
 
