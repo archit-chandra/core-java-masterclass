@@ -83,4 +83,17 @@ replace
 Immutable objects can't be changed (prefered to be as a map's keys, although Java don't prohibit that)
 
 
+Immutable class means that they can't be changed once they are created.
+Its a great way :
+    1. to increase encapsulation
+    2. to reduce errors if one allow external code to modify class instances
+
+Strategy to define immutable classes:
+    1. No setter method
+    2. Make fields -> final & private
+    3. Don't allow sub-classes to override methods
+                (a) declare class -> final
+                (b) constructor -> private, & construct instances in factory methods
+    4. 
+
 
