@@ -96,5 +96,17 @@ public class SetsAndHashSetMain {
         for (HeavenlyBody moon : moons) {
             System.out.println("\t" + moon.getName());
         }
+
+        // Just to show that duplication can occur when trying to save own object as an element in the Set
+        // Here, Pluto saved again with different orbitalPeriod in the planet Set.
+        HeavenlyBody pluto = new HeavenlyBody("Pluto", 842);
+        planets.add(pluto);
+
+        // Pluto shown twice
+        // But after overriding equals(), hashCode(), duplicate Pluto:842 is not added into the plane Set
+        System.out.println("--------Planets Again With Extra Pluto----------");
+        for (HeavenlyBody planet : planets) {
+            System.out.println("\t" + planet.getName() + " : " + planet.getOrbitalPeriod());
+        }
     }
 }

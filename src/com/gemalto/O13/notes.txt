@@ -116,5 +116,12 @@ Set has following characteristics:
     6. HashSet - most common implementation
 
 
+** Java recommends:
+If you are using your own object as a key in a Map, or as an element in the Set (therefore, advised to store just the names of object)
+=> overide equals & hascode methods
+or else unwanted duplication may happen because those objects may not compare equal, so Sets/Maps(keys) my accept that duplicated objects
 
+because Object class equals() is based on only Referential equality
+                                              (when both reference points to the same object => equal, otherwise unequal)
 
+If two objects are equal, they must have same hashCode (bucket)
