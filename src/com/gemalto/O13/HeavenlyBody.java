@@ -3,7 +3,11 @@ package com.gemalto.O13;
 import java.util.HashSet;
 import java.util.Set;
 
+// final class can't be extended. It can't have any sub-classes
 public final class HeavenlyBody {
+
+    // final variables can't be modified => acts like CONSTANTS
+    // You are always allowed to initialize a final variable. The compiler makes sure that you can do it only once.
     private final String name;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satellites;
@@ -31,8 +35,9 @@ public final class HeavenlyBody {
         return this.satellites.add(moon);
     }
 
+    // final method can not be overridden
     @Override
-    public boolean equals(Object obj) {
+    public final boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }

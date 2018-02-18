@@ -116,7 +116,7 @@ Set has following characteristics:
     6. HashSet - most common implementation
 
 
-** Java recommends:
+******* Java recommends about equals & hascode methods: *********
 If you are using your own object as a key in a Map, or as an element in the Set (therefore, advised to store just the names of object)
 => overide equals & hascode methods
 or else unwanted duplication may happen because those objects may not compare equal, so Sets/Maps(keys) my accept that duplicated objects
@@ -125,3 +125,12 @@ because Object class equals() is based on only Referential equality
                                               (when both reference points to the same object => equal, otherwise unequal)
 
 If two objects are equal, they must have same hashCode (bucket)
+
+
+
+final keyword
+================
+final class can't be extended. It can't have any sub-classes
+final method can not be overridden
+final variables can't be modified => acts like CONSTANTS
+                You are always allowed to initialize a final variable. The compiler makes sure that you can do it only once.
