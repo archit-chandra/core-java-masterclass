@@ -1,4 +1,4 @@
-package com.gemalto.O13.challenge1;
+package com.gemalto.O13.challenge1_SetsAndHashSet;
 
 public class DwarfPlanet extends HeavenlyBody {
 

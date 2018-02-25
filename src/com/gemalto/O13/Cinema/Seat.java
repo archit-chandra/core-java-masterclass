@@ -1,4 +1,4 @@
-package com.gemalto.O13;
+package com.gemalto.O13.Cinema;
 
 public class Seat implements Comparable<Seat> {
 

@@ -1,4 +1,4 @@
-package com.gemalto.O13;
+package com.gemalto.O13.Adventure;
 
 import java.util.HashMap;
 import java.util.Map;
