@@ -29,6 +29,22 @@ public class Basket {
         return 0;
     }
 
+    public int removeFromBasket(StockItem item, int quantity) {
+        if ((item != null) && (quantity > 0)) {
+            // check if we already have item in the basket
+            int inBasket = list.getOrDefault(item, 0);
+            int newQuantity = inBasket + quantity;
+
+            if (newQuantity > 0) {
+                list.put(item, newQuantity);
+                return quantity;
+            } else if (newQuantity == 0) {
+                list.remove(item);
+            }
+        }
+        return 0;
+    }
+
     public Map<StockItem, Integer> getItems() {
         return Collections.unmodifiableMap(list);
     }
