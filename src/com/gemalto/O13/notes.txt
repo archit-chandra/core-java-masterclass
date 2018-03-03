@@ -143,3 +143,12 @@ final class can't be extended. It can't have any sub-classes
 final method can not be overridden
 final variables can't be modified => acts like CONSTANTS
                 You are always allowed to initialize a final variable. The compiler makes sure that you can do it only once.
+
+
+
+
+In Sorted Collections, we used only:
+    LinkedHashMap
+    TreeMap
+
+** Read about others
