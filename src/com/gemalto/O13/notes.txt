@@ -1,0 +1,154 @@
+==============================================
+Collection
+       ->Set
+           ->SortedSet
+       ->List (Ordered collection of item that can contain duplicates)
+           ->ArrayList
+           ->LinkedList
+       ->Queue
+       ->Deque
+
+
+Map
+   ->SortedMap
+==============================================
+In Theatre class,
+private List<Seat> seats = new ArrayList<>();
+
+ArrayList
+LinkedList
+
+Changed: List -> Collection (more generic)
+
+HashSet
+LinkedHashSet
+
+
+TreeSet - error (ClassCastException: because requires to implement Comparable interface on Seat)
+
+
+
+
+Collections methods:
+    reverse
+    shuffle
+    sort
+    swap
+    (copy -> not useful in general)
+    copy(List<? super T> dest, List<? extends T> src)
+         dest -> Collections/ Iterable/ List
+         src  -> List
+
+
+Comparator can be in a new class or create an object(anonymous class) within some other class as here.
+Beware of the problem: Ordering being consistent with equals
+---------------------
+Explaination:
+--------------
+In Seat -> public int compareTo(Seat seat) {...} returns 0 if same seat number
+In Comparator's comapare() , it is not consistent with equals (it returns 0 when seats have same price)
+            @Override
+            public int compare(Seat seat1, Seat seat2) {
+                if (seat1.getPrice() < seat2.getPrice()) {
+                    return -1;
+                } else if (seat1.getPrice() > seat2.getPrice()) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+
+Fix:
+--------
+More work required on the compare()
+
+
+
+
+Map
+========================
+can have a single unique key (no duplication) -> if try to duplicate, the new value will overwrite the old value
+each key has single value
+
+Map's methods:
+---------------
+put
+get
+containsKey
+keySet
+remove
+replace
+
+
+Immutable objects can't be changed (prefered to be as a map's keys, although Java don't prohibit that)
+
+
+Immutable class means that they can't be changed once they are created.
+Its a great way :
+    1. to increase encapsulation
+    2. to reduce errors if one allow external code to modify class instances
+
+Strategy to define immutable classes:
+    1. No setter method
+    2. Make fields -> final & private
+    3. Don't allow sub-classes to override methods
+                (a) declare class -> final
+                (b) constructor -> private, & construct instances in factory methods
+    4.
+
+
+
+Sets & HashSets
+====================
+Unlike List (Ordered collection of item that can contain duplicates),
+Set has following characteristics:
+    1. No defined ordering (un-ordered)
+    2. Can not contain duplicates
+    3. It takes single type Set<T>
+    4. Common methods-
+                       add()
+                       remove()
+                       clear()
+                       size()
+                       isEmpty()
+                       contains() -> can check if something exists
+    5. Can't retrieve items from Set using index, can check if something exists
+    6. HashSet - most common implementation
+
+
+******* Java recommends about equals & hascode methods: *********
+If you are using your own object as a key in a Map, or as an element in the Set (therefore, advised to store just the names of object)
+=> overide equals & hascode methods
+or else unwanted duplication may happen because those objects may not compare equal, so Sets/Maps(keys) my accept that duplicated objects
+
+because Object class equals() is based on only Referential equality
+                                              (when both reference points to the same object => equal, otherwise unequal)
+
+If two objects are equal, they must have same hashCode (bucket)
+
+
+
+Set Interface Bulk Operations
+==============================
+s1.containsAll(s2) — returns true if s2 is a subset of s1. (s2 is a subset of s1 if set s1 contains all of the elements in s2.)
+s1.addAll(s2) — transforms s1 into the union of s1 and s2. (The union of two sets is the set containing all of the elements contained in either set.)
+s1.retainAll(s2) — transforms s1 into the intersection of s1 and s2. (The intersection of two sets is the set containing only the elements common to both sets.)
+s1.removeAll(s2) — transforms s1 into the (asymmetric) set difference of s1 and s2. (For example, the set difference of s1 minus s2 is the set containing all of the elements found in s1 but not in s2.)
+
+
+
+final keyword
+================
+final class can't be extended. It can't have any sub-classes
+final method can not be overridden
+final variables can't be modified => acts like CONSTANTS
+                You are always allowed to initialize a final variable. The compiler makes sure that you can do it only once.
+
+
+
+
+In Sorted Collections, we used only:
+    LinkedHashMap
+    TreeMap
+
+** Read about others

@@ -1,0 +1,26 @@
+String Utilities
+=====================
+1. split(expression)
+    eg1:
+        String[] exp1 = "You are standing on the road".split(" ");
+        for (String i : exp1) {
+            System.out.println(i);
+        }
+
+    Output:
+    You
+    are
+    standing
+    on
+    the
+    road
+
+    eg2:
+        String[] exp2 = "You are in the building, a well house for a small spring".split(", ");
+        for (String i : exp2) {
+            System.out.println(i);
+        }
+
+    Output:
+    You are in the building
+    a well house for a small spring
