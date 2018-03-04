@@ -1,4 +1,5 @@
-package com.gemalto.O11.javaGenerics;
+package com.gemalto.O11.javaGenerics.challenge1_TeamsAndPlayer;
+
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package com.gemalto.O11.javaGenerics;
+package com.gemalto.O11.javaGenerics.TeamsAndPlayers;
 
 public abstract class Player {
     private String name;
