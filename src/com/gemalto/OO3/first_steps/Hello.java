@@ -1,4 +1,4 @@
-package com.gemalto.OO3;
+package com.gemalto.OO3.first_steps;
 
 public class Hello {
 //	public static void main(String[] args) {

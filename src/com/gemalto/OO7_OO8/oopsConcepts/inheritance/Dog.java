@@ -1,4 +1,4 @@
-package com.gemalto.oopsConcepts.inheritance;
+package com.gemalto.OO7_OO8.oopsConcepts.inheritance;
 
 public class Dog extends Animal {
 

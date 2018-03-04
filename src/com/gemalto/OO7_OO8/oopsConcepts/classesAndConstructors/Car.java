@@ -1,4 +1,4 @@
-package com.gemalto.oopsConcepts.classes;
+package com.gemalto.OO7_OO8.oopsConcepts.classesAndConstructors;
 
 // classes = blueprint of object
 // think of like a user-defined type, much more powerful than primitive data type
@@ -15,7 +15,7 @@ public class Car {
     private String model;
     private String engine;
     private String color;
-    
+
     // if you specify constructor using the fields, its safe to add default
     // constructor.
     // when no constructor is defined, Java provides this by itself

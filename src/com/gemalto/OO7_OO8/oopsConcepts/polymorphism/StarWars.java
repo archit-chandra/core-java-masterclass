@@ -1,4 +1,4 @@
-package com.gemalto.oopsConcepts.polymorphism;
+package com.gemalto.OO7_OO8.oopsConcepts.polymorphism;
 
 public class StarWars extends Movie {
     
