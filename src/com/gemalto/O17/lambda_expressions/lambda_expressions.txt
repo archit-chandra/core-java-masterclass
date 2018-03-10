@@ -1,0 +1,5 @@
+Introduced in Java 8
+
+Provides easier way to work with interfaces that only got one method (abstract)
+
+Often used with anonymous classes
