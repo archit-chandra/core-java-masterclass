@@ -1,0 +1,3 @@
+If a exception is thrown in a method: If it is not catched(handled) there, that exception will be propagated to the calling method
+
+In try catch block, catch block can still create another exception, therefore keep catch block as simple as possible
