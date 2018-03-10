@@ -1,3 +1,39 @@
-If a exception is thrown in a method: If it is not catched(handled) there, that exception will be propagated to the calling method
+Two common approaches to avoid exceptions:
+    1. Look before you leap (Initial checks) - Longer code
+    2. Easier to ask for Forgiveness & Permissions (Exceptions) - Shorter readable code
+
+Eg.
+    private static int getIntLBYL() {
+        Scanner s = new Scanner(System.in);
+        boolean isValid = true;
+        System.out.println("Please enter an integer");
+        String input = s.next();
+        for (int i = 0; i < input.length(); i++) {
+            if (!Character.isDigit(input.charAt(i))) {
+                isValid = false;
+                break;
+            }
+        }
+        if (isValid) {
+            return Integer.parseInt(input);
+        }
+        return 0;
+    }
+
+
+    private static int getIntEAFP() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Please enter an integer");
+        try {
+            return s.nextInt();
+        } catch (InputMismatchException e) {
+            return 0;
+        }
+    }
+
+If a exception is thrown in a method: If it is not catched(handled) there, that exception will be propagated to the calling method.
+Exception will be passed back to the calling method
 
 In try catch block, catch block can still create another exception, therefore keep catch block as simple as possible
+
+Stacktrace will list all the method calls where the exception happened

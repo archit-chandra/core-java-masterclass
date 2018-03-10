@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Shows the following exception handling
  * InputMismatchException - When character is typed instead of digits
  * NoSuchElementException - When no element is present (Ctrl + D)
- * AirthmeticException    - When divide by 0
+ * ArithmeticException    - When divide by 0
  */
 public class ExceptionExample1 {
 
@@ -18,15 +18,19 @@ public class ExceptionExample1 {
     }
 
     private static int divide() {
-        int x;
+        int x, y;
         try {
             x = getInt();
-        } catch (NoSuchElementException e) { // catching NoSuchElementException here
-            x = getInt(); // this catch again throws an exception => WRONG WAY
+            y = getInt();
+        } catch (NoSuchElementException e) {
+            throw new ArithmeticException("No suitable input");
         }
-        int y = getInt();
         System.out.println("x is " + x + ", y is " + y);
-        return x / y;
+        try {
+            return x / y;
+        } catch (ArithmeticException e) {
+            throw new ArithmeticException("Attempt to divide by zero");
+        }
     }
 
     private static int getInt() {
