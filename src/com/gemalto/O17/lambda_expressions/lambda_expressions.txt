@@ -5,7 +5,7 @@ Provides easier way to work with interfaces that only got one method (abstract)
 Often used with anonymous classes
 
 It has 3 main parts:
-    1. argument list
+    1. argument list : () is used only when there are no or more than 1 arguments. When only 1 argument, directly pass it like event->
     2. ->
     3. body
 
@@ -14,3 +14,5 @@ For example, a Comparable interface with a single method 'compareTo' is used for
 Java 8 has defined a lot of functional interfaces to be used extensively in lambda expressions.
 
 Functional interfaces => lambda expressions
+
+If Lambda contains more than 1 statement, then we need to use return keyword, otherwise no need of return keyword
