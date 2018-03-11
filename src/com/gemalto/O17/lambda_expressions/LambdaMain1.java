@@ -2,7 +2,6 @@ package com.gemalto.O17.lambda_expressions;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class LambdaMain1 {
@@ -42,12 +41,22 @@ public class LambdaMain1 {
         // Arranging them by sort via name in ascending order
 
         // Sorting without Lambdas
-        Collections.sort(employees, new Comparator<Employee>() {
-            @Override
-            public int compare(Employee employee1, Employee employee2) {
-                return employee1.getName().compareTo(employee2.getName());
-            }
-        });
+//        Collections.sort(employees, new Comparator<Employee>() {
+//            @Override
+//            public int compare(Employee employee1, Employee employee2) {
+//                return employee1.getName().compareTo(employee2.getName());
+//            }
+//        });
+
+        // Sorting with Lambda expression
+//        Collections.sort(employees, (Employee employee1, Employee employee2) ->
+//                employee1.getName().compareTo(employee2.getName()));
+
+        // Further improvement with Lambda expression : can ignore the type
+        // so above code can still be reduced as:
+        Collections.sort(employees, (employee1, employee2) ->
+                employee1.getName().compareTo(employee2.getName()));
+
         for (Employee employee : employees) {
             System.out.println(employee.getName());
         }
