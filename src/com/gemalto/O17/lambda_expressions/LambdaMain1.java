@@ -83,6 +83,11 @@ public class LambdaMain1 {
 
         String otherSillyString = doStringStuff((s1, s2) -> s1.toUpperCase() + s2.toUpperCase(), employees.get(2).getName(), employees.get(3).getName());
         System.out.println("otherSillyString = " + otherSillyString);
+
+        System.out.println("----------Using Another Class---------------");
+        AnotherClass anotherClass = new AnotherClass();
+        String s = anotherClass.doSomething();
+        System.out.println("Another class returned String = " + s);
     }
 
     public final static String doStringStuff(UpperConcat uc, String s1, String s2) {
@@ -118,6 +123,28 @@ class Employee {
 
 interface UpperConcat {
     public String upperAndConcat(String s1, String s2);
+}
+
+class AnotherClass {
+    public String doSomething() {
+        // Ouput: The lambda expression class's name is: AnotherClass
+        System.out.println("The AnotherClass class's name is: " + getClass().getSimpleName());
+        UpperConcat upperConcat = (s1, s2) -> {
+            System.out.println("The lambda expression class's name is: " + getClass().getSimpleName());
+            return s1.toUpperCase() + s2.toUpperCase();
+        };
+        return LambdaMain1.doStringStuff(upperConcat, "String1", "String2");
+
+        // Output: The AnotherClass class's name is:
+//        System.out.println("The AnotherClass class's name is: " + getClass().getSimpleName());
+//        return LambdaMain1.doStringStuff(new UpperConcat() {
+//            @Override
+//            public String upperAndConcat(String s1, String s2) {
+//                System.out.println("The anonymous class's name is: " + getClass().getSimpleName());
+//                return s1.toUpperCase() + s2.toUpperCase();
+//            }
+//        }, "String1", "String2");
+    }
 }
 
 //class CodeToRun implements Runnable {
