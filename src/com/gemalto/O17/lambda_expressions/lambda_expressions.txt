@@ -20,3 +20,7 @@ Functional interfaces => lambda expressions
 If Lambda contains more than 1 statement, then :
     1. We need to use return keyword, otherwise no need of return keyword
     2. Use {} and ;
+
+
+Predicate argument (condition) is just (lambda) expression that match Predicate interface(functional)
+                                                                      accept one parameter(type) and return boolean value based on the condition
