@@ -103,6 +103,12 @@ public class LambdaMain1 {
 //            System.out.println(employee.getName());
 //            new Thread(() -> System.out.println(employee.getAge())).start();
 //        }
+
+        System.out.println("---------------Printing Employees Name, Age With Iterable forEach use of Lambdas-----------------------");
+        employees.forEach(employee -> {
+            System.out.println(employee.getName());
+            System.out.println(employee.getAge());
+        });
     }
 
     public final static String doStringStuff(UpperConcat uc, String s1, String s2) {
