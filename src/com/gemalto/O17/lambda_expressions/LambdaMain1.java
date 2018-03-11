@@ -88,6 +88,21 @@ public class LambdaMain1 {
         AnotherClass anotherClass = new AnotherClass();
         String s = anotherClass.doSomething();
         System.out.println("Another class returned String = " + s);
+
+        System.out.println("---------------Printing Employees Age Using Lambda-----------------------");
+        for (Employee employee : employees) {
+            System.out.println(employee.getName());
+            new Thread(() -> System.out.println(employee.getAge())).start();
+        }
+
+        System.out.println("---------------Printing Employees Age Without Lambda-----------------------");
+        // This won't work, because of the the employee is not final/ effectively final
+//        Employee employee;
+//        for (int i = 0; i < employees.size(); i++) {
+//            employee = employees.get(i);
+//            System.out.println(employee.getName());
+//            new Thread(() -> System.out.println(employee.getAge())).start();
+//        }
     }
 
     public final static String doStringStuff(UpperConcat uc, String s1, String s2) {
@@ -126,13 +141,20 @@ interface UpperConcat {
 }
 
 class AnotherClass {
+    //int i = 0;
+
     public String doSomething() {
+
+        int i = 0;
+        //final int i = 0;
+
         // Ouput: The lambda expression class's name is: AnotherClass
-        System.out.println("The AnotherClass class's name is: " + getClass().getSimpleName());
         UpperConcat upperConcat = (s1, s2) -> {
             System.out.println("The lambda expression class's name is: " + getClass().getSimpleName());
+            System.out.println("i in the lambda expression is " + i);
             return s1.toUpperCase() + s2.toUpperCase();
         };
+        System.out.println("The AnotherClass class's name is: " + getClass().getSimpleName());
         return LambdaMain1.doStringStuff(upperConcat, "String1", "String2");
 
         // Output: The AnotherClass class's name is:
@@ -144,6 +166,21 @@ class AnotherClass {
 //                return s1.toUpperCase() + s2.toUpperCase();
 //            }
 //        }, "String1", "String2");
+
+        // nested block example,
+//        {
+//            UpperConcat upperConcat = new UpperConcat() {
+//                @Override
+//                public String upperAndConcat(String s1, String s2) {
+//                    //System.out.println("i = " + i);    // i must be either final or effectively final
+//                    return s1.toUpperCase() + s2.toUpperCase();
+//                }
+//            };
+//            System.out.println("The AnotherClass class's name is " + getClass().getSimpleName());
+//            i++;
+//            System.out.println("i = " + i);
+//            return LambdaMain1.doStringStuff(upperConcat, "String1", "String2");
+//        }
     }
 }
 

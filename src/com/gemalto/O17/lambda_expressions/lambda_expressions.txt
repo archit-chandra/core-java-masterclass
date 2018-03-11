@@ -3,6 +3,8 @@ Introduced in Java 8
 Provides easier way to work with interfaces that only got one method (abstract)
 
 Often used with anonymous classes
+In anonymous classes, variables must be either final or a global variable of the container class,
+But in Lambdas, there is no such restrictions, it works as a nested block.
 
 It has 3 main parts:
     1. argument list : () is used only when there are no or more than 1 arguments. When only 1 argument, directly pass it like event->
@@ -15,4 +17,6 @@ Java 8 has defined a lot of functional interfaces to be used extensively in lamb
 
 Functional interfaces => lambda expressions
 
-If Lambda contains more than 1 statement, then we need to use return keyword, otherwise no need of return keyword
+If Lambda contains more than 1 statement, then :
+    1. We need to use return keyword, otherwise no need of return keyword
+    2. Use {} and ;
