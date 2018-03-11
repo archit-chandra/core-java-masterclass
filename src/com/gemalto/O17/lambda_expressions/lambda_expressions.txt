@@ -24,3 +24,7 @@ If Lambda contains more than 1 statement, then :
 
 Predicate argument (condition) is just (lambda) expression that match Predicate interface(functional)
                                                                       accept one parameter(type) and return boolean value based on the condition
+
+Supplier Interface:
+    Does not accept any arguments
+    Returns a value

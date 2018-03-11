@@ -2,8 +2,10 @@ package com.gemalto.O17.lambda_expressions.functional_interfaces_lambda_usage;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Main {
 
@@ -66,6 +68,14 @@ public class Main {
         System.out.println("greaterThan15Predicate.test : " + greaterThan15Predicate.test(a + 5));
         // chaining of Predicate
         System.out.println("Predicate chaining : " + greaterThan15Predicate.and(lessThan100Predicate).test(50));
+
+        // Supplier Interface
+        System.out.println("--------------Supplier Interface Example----------------------");
+        Random random = new Random();
+        Supplier<Integer> randomSupplier = () -> random.nextInt(1000);
+        for (int i = 0; i < 10; i++) {
+            System.out.println(randomSupplier.get());
+        }
 
     }
 
