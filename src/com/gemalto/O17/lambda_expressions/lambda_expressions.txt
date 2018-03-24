@@ -28,3 +28,7 @@ Predicate argument (condition) is just (lambda) expression that match Predicate 
 Supplier Interface:
     Does not accept any arguments
     Returns a value
+
+Consumer  : accepts 1 argument, returns void
+Supplier  : don't accept arguments, returns value
+Predicate : accept 1 argument, returns boolean value only
